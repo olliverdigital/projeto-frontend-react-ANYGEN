@@ -1,16 +1,15 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Router, Route, Switch } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/NotFound";
 
-// Use hash-based routing (/#/) to support opening index.html directly via file:// protocol
+// Use history-based routing (remove hash routing) so pages are indexable and support direct links
 function AppRouter() {
   return (
-    <Router hook={useHashLocation}>
+    <Router>
       <Switch>
         <Route path="/" component={Home} />
         <Route component={NotFound} />
@@ -18,11 +17,6 @@ function AppRouter() {
     </Router>
   );
 }
-
-// Note on theming:
-// - Choose defaultTheme based on your design (light or dark background)
-// - Update the color palette in index.css to match
-// - If you want switchable themes, add `switchable` prop and use `useTheme` hook
 
 function App() {
   return (
@@ -38,4 +32,3 @@ function App() {
 }
 
 export default App;
-

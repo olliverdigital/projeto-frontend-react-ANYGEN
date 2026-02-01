@@ -338,7 +338,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-10 rounded-none text-lg">
-                  <a href="https://wa.me/5585988154220" target="_blank" rel="noreferrer">
+                  <a href="https://wa.me/5534998099418" target="_blank" rel="noreferrer">
                     <PhoneCall className="mr-2 h-5 w-5" /> ATENDIMENTO
                   </a>
                 </Button>

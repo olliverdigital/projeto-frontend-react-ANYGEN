@@ -98,7 +98,7 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-slate-700 bg-slate-900/50 text-white hover:bg-white hover:text-slate-950 font-medium h-14 px-8 rounded-none transition-all">
-                  <a href="https://wa.me/5585988154220" target="_blank" rel="noreferrer">
+                  <a href="https://wa.me/5534998099418" target="_blank" rel="noreferrer">
                     <PhoneCall className="mr-2 h-5 w-5" /> WhatsApp Direto
                   </a>
                 </Button>

@@ -38,30 +38,18 @@ export function ContactForm() {
   }
 
   const onSubmit = async (data: ContactFormData) => {
-    setSubmitError(null)
+    // Simula tempo de processamento para UX
+    await new Promise(resolve => setTimeout(resolve, 800))
 
-    try {
-      const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
+    // Formata mensagem para WhatsApp
+    const text = `*SOLICITAÇÃO VIA SITE*\n\n*Nome*: ${data.name}\n*Empresa*: ${data.company || 'N/A'}\n*Email*: ${data.email}\n*Telefone*: ${data.phone}\n*Serviço*: ${data.service}\n\n*Mensagem*: ${data.message}`
 
-      // Se não tiver endpoint configurado ou for o placeholder, simula erro para cair no fallback
-      if (!formspreeEndpoint || formspreeEndpoint.includes('SEU_ID_AQUI')) {
-        throw new Error('Endpoint de e-mail não configurado')
-      }
+    // Abre WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`
+    window.open(whatsappUrl, '_blank')
 
-      const response = await fetch(formspreeEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) throw new Error('Falha no envio')
-
-      setIsSuccess(true)
-      reset()
-    } catch (error) {
-      console.error('Erro no envio de e-mail:', error)
-      setSubmitError('Houve um erro no envio automático. Por favor, envie via WhatsApp.')
-    }
+    setIsSuccess(true)
+    reset()
   }
 
   if (isSuccess) {
@@ -143,7 +131,7 @@ export function ContactForm() {
 
       <Button type="submit" disabled={isSubmitting} className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-lg font-bold rounded-none border border-secondary shadow-[0_0_15px_rgba(249,115,22,0.2)]">
         {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
-        {isSubmitting ? 'ENVIANDO...' : 'SOLICITAR ORÇAMENTO'}
+        {isSubmitting ? 'REDIRECIONANDO...' : 'SOLICITAR NO WHATSAPP'}
       </Button>
     </form>
   )

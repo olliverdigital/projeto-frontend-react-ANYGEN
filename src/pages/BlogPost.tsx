@@ -34,6 +34,10 @@ export default function BlogPost() {
                 <img
                     src={post.image}
                     alt={post.title}
+                    width="1920"
+                    height="400"
+                    loading="eager"
+                    decoding="sync"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="container relative z-20 h-full flex flex-col justify-end pb-12 px-4">

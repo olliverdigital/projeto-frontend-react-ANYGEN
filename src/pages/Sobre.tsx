@@ -25,7 +25,7 @@ export default function Sobre() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden shadow-lg">
-              <img src={solarMaintenance} alt="Equipe MIDAS realizando manutenção em usina solar fotovoltaica" className="w-full h-full object-cover" />
+              <img src={solarMaintenance} alt="Equipe MIDAS realizando manutenção em usina solar fotovoltaica" width="800" height="450" loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl border border-slate-100 max-w-xs hidden md:block">
               <p className="font-heading font-bold text-brand-blue text-lg mb-2">Sede em Rio Paranaíba – MG</p>

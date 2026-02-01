@@ -7,12 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Title and Description are managed by SEOHead component -->
 
-  <!-- Fonts: Barlow (Headings) and Inter (Body) -->
+  <!-- Performance Optimizations -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts: Barlow (Headings) and Inter (Body) - Optimized with font-display:swap -->
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+  </noscript>
 </head>
 
 <body>

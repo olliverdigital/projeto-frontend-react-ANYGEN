@@ -26,6 +26,10 @@ export default function Home() {
           <img
             src={heroBg}
             alt="Industrial Technical Background"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="sync"
             className="
               w-full h-full object-cover
               opacity-40
@@ -311,6 +315,10 @@ export default function Home() {
               <img
                 src={industrialMaintenance}
                 alt="Equipe técnica MIDAS"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
                 className="w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl border border-slate-900"
               />
               <div className="absolute -bottom-8 -left-8 bg-slate-900 p-8 text-white border-l-4 border-secondary shadow-xl max-w-xs">

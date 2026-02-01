@@ -26,7 +26,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" aria-label="MIDAS Home">
           <div className="relative flex items-center justify-center w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform">
-            <img src={logoImg} alt="MIDAS Logo" className="w-full h-full object-contain" />
+            <img src={logoImg} alt="MIDAS Logo" width="48" height="48" loading="eager" className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl font-heading font-black tracking-tighter text-slate-900 group-hover:text-secondary transition-colors">MIDAS</span>
@@ -71,7 +71,7 @@ export function Header() {
             <div className="flex flex-col gap-6 mt-6">
               <Link to="/" className="flex items-center gap-2 mb-8 border-b border-slate-200 pb-4" onClick={() => setIsOpen(false)}>
                 <div className="flex items-center justify-center w-12 h-12 overflow-hidden">
-                  <img src={logoImg} alt="MIDAS Logo" className="w-full h-full object-contain" />
+                  <img src={logoImg} alt="MIDAS Logo" width="48" height="48" loading="eager" className="w-full h-full object-contain" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-lg font-black text-slate-900">MIDAS</span>

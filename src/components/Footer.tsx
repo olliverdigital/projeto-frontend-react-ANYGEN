@@ -17,6 +17,9 @@ export function Footer() {
                 <img
                   src={logoMidas}
                   alt="MIDAS Locações & Serviços"
+                  width="40"
+                  height="40"
+                  loading="lazy"
                   className="h-10 w-auto object-contain"
                 />
               </div>

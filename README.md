@@ -109,7 +109,7 @@ Este projeto utiliza **roteamento baseado em histórico** (history-based routing
 - Vercel (arquivo `vercel.json`)
 - Hostinger (arquivo `.htaccess`)
 
-### Estrutura de Rotas
+### Estrutura de Rotas (Aplicação Principal)
 
 ```
 / ..................... Página inicial
@@ -121,6 +121,8 @@ Este projeto utiliza **roteamento baseado em histórico** (history-based routing
 /blog ................. Blog/Artigos
 * ..................... Página 404 (rotas não encontradas)
 ```
+
+> **Nota**: O diretório `template-app/` contém um template minimalista com roteamento básico (apenas `/` e `NotFound`) que também foi atualizado para usar history-based routing.
 
 ---
 

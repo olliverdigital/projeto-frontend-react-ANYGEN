@@ -20,8 +20,8 @@ export default function Emergencia() {
             Seu equipamento parou? Atendimento imediato para situações críticas em sistemas elétricos e industriais.
           </p>
           <Button asChild size="lg" className="bg-white text-red-600 hover:bg-red-50 font-bold text-lg h-14 px-10 shadow-xl">
-            <a href="https://wa.me/5585988154220" target="_blank" rel="noreferrer">
-              <PhoneCall className="mr-2 h-6 w-6" /> LIGAR AGORA: (85) 98815-4220
+            <a href="https://wa.me/5534998099418" target="_blank" rel="noreferrer">
+              <PhoneCall className="mr-2 h-6 w-6" /> LIGAR AGORA: (34) 99809-9418
             </a>
           </Button>
           <p className="mt-4 text-sm text-red-200">Clique para falar diretamente no WhatsApp</p>

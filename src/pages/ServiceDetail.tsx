@@ -81,7 +81,7 @@ export default function ServiceDetail() {
                 Interessado em {service.title}? Preencha o formulário e fale com um especialista.
               </p>
               <Button asChild className="w-full bg-green-600 hover:bg-green-700 mb-6">
-                <a href={`https://wa.me/5585988154220?text=Olá, gostaria de saber mais sobre ${service.title}`} target="_blank" rel="noreferrer">
+                <a href={`https://wa.me/5534998099418?text=Olá, gostaria de saber mais sobre ${service.title}`} target="_blank" rel="noreferrer">
                   <PhoneCall className="mr-2 h-4 w-4" /> Conversar no WhatsApp
                 </a>
               </Button>

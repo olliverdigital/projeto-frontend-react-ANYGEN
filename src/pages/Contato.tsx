@@ -32,8 +32,8 @@ export default function Contato() {
                   <div>
                     <h3 className="font-bold text-lg">Telefone & WhatsApp</h3>
                     <p className="text-muted-foreground mb-1">Atendimento comercial e técnico.</p>
-                    <a href="tel:+5585988154220" className="text-xl font-bold text-brand-blue hover:underline">
-                      (85) 98815-4220
+                    <a href="tel:+5534998099418" className="text-xl font-bold text-brand-blue hover:underline">
+                      (34) 99809-9418
                     </a>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Contato() {
                     <h3 className="font-bold text-lg">Localização</h3>
                     <p className="text-muted-foreground">
                       Rio Paranaíba – MG<br />
-                      Atuação em todo o estado e regiões vizinhas.
+                      Atuação em todo Brasil (Foco Industrial)
                     </p>
                   </div>
                 </div>

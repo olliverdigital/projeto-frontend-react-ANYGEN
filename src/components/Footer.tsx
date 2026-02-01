@@ -37,7 +37,7 @@ export function Footer() {
             </p>
 
             <div className="flex gap-4 pt-2">
-              <a href="#" className="w-10 h-10 flex items-center justify-center border border-slate-800 hover:border-secondary hover:text-secondary transition-all" aria-label="Instagram">
+              <a href="https://instagram.com/midas_ltda" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-slate-800 hover:border-secondary hover:text-secondary transition-all" aria-label="Instagram">
                 <Instagram className="h-4 w-4" />
               </a>
               <a href="#" className="w-10 h-10 flex items-center justify-center border border-slate-800 hover:border-secondary hover:text-secondary transition-all" aria-label="LinkedIn">
@@ -93,8 +93,8 @@ export function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-500 uppercase">Plantão Técnico</span>
-                  <a href="tel:+5585988154220" className="hover:text-white text-lg font-bold text-slate-300">
-                    +55 (85) 98815-4220
+                  <a href="tel:+5534998099418" className="hover:text-white text-lg font-bold text-slate-300">
+                    +55 (34) 99809-9418
                   </a>
                 </div>
               </li>

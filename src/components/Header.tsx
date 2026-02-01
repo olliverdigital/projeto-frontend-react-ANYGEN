@@ -53,7 +53,7 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-4">
           <Button asChild variant="default" className="bg-secondary hover:bg-secondary/90 text-white font-bold rounded-none h-10 px-6">
-            <a href="https://wa.me/5585988154220" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/5534998099418" target="_blank" rel="noreferrer">
               <PhoneCall className="mr-2 h-4 w-4" />
               Falar com Especialista
             </a>
@@ -96,7 +96,7 @@ export function Header() {
               </nav>
               <div className="mt-8 border-t border-slate-200 pt-6">
                 <Button asChild className="w-full bg-secondary text-white font-bold rounded-none h-12" size="lg">
-                  <a href="https://wa.me/5585988154220" target="_blank" rel="noreferrer">
+                  <a href="https://wa.me/5534998099418" target="_blank" rel="noreferrer">
                     <PhoneCall className="mr-2 h-4 w-4" />
                     WhatsApp
                   </a>

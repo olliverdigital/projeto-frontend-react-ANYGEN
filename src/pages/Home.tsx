@@ -4,6 +4,7 @@ import { SEO } from '@/components/SEO'
 import { Button } from '@/components/ui/button'
 import { ServiceCard } from '@/components/ServiceCard'
 import { ContactForm } from '@/components/ContactForm'
+import { Testimonials } from '@/components/Testimonials'
 import heroBg from '@/assets/hero-bg.jpg'
 import industrialMaintenance from '@/assets/industrial-maintenance.jpg'
 
@@ -329,6 +330,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <Testimonials />
 
       {/* CTA SECTION: Minimal Dark */}
       <section id="contato" className="py-24 bg-slate-950 border-t border-slate-900">

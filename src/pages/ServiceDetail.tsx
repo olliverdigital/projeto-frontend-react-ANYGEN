@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 // import { ContactForm } from '@/components/ContactForm'
 import { SEO } from '@/components/SEO'
 import { servicesData } from '@/data/services'
+import { InverterBrands } from '@/components/InverterBrands'
 
 export default function ServiceDetail() {
   const { id } = useParams()
@@ -38,6 +39,9 @@ export default function ServiceDetail() {
           </p>
         </div>
       </section>
+
+      {/* Inverter Brands - Only for Energia Solar */}
+      {service.id === 'energia-solar' && <InverterBrands />}
 
       <section className="py-20 container">
         <div className="grid lg:grid-cols-3 gap-12">

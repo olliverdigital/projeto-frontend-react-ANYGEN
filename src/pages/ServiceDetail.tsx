@@ -23,18 +23,30 @@ export default function ServiceDetail() {
         description={service.description}
         canonical={`/servicos/${id}`}
       />
-      <section className="bg-slate-900 text-white py-20">
-        <div className="container">
-          <Link to="/servicos" className="inline-flex items-center text-slate-400 hover:text-white mb-6 transition-colors">
+      <section
+        className="relative py-20 min-h-[400px] flex items-center bg-slate-900"
+        style={service.backgroundImage ? {
+          backgroundImage: `url(${service.backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: service.backgroundPosition || 'center',
+        } : {}}
+      >
+        {/* Overlay for readability if bg image exists */}
+        {service.backgroundImage && (
+          <div className="absolute inset-0 bg-slate-900/80"></div>
+        )}
+
+        <div className="container relative z-10">
+          <Link to="/servicos" className="inline-flex items-center text-slate-300 hover:text-white mb-6 transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Serviços
           </Link>
           <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-brand-blue rounded-lg">
+            <div className="p-3 bg-brand-blue rounded-lg shadow-lg">
               <Icon className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-3xl md:text-5xl font-heading font-bold">{service.title}</h1>
+            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white drop-shadow-md">{service.title}</h1>
           </div>
-          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
+          <p className="text-xl text-slate-200 max-w-3xl leading-relaxed drop-shadow-sm">
             {service.description}
           </p>
         </div>

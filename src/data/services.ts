@@ -1,10 +1,17 @@
 import { Factory, Sun, Zap, Activity, ClipboardCheck, ShieldAlert } from 'lucide-react'
+import manutencaoBg from '@/assets/midaslsltda-energia-solar-paineis-fotovoltaicos.webp'
+import solarBg from '@/assets/midaslsltda-energia-solar-paineis.webp'
+import infraBg from '@/assets/midaslsltda-paineis-fotovoltaicos-instalacao01.webp'
+import preditivaBg from '@/assets/midaslsltda-eletronica-de-potencia-laboratorio-05.webp'
+import projetosBg from '@/assets/midaslsltda-eletronica-de-potencia-laboratorio-02.webp'
+import emergenciaBg from '@/assets/midaslsltda-especialistass-em-conserto-de-inversores01.webp'
 
 export const servicesData = [
   {
     id: "manutencao-industrial",
     title: "Manutenção Industrial",
     icon: Factory,
+    backgroundImage: manutencaoBg,
     shortDesc: "Gestão completa de ativos industriais com foco em disponibilidade.",
     description: "Nossa equipe atua na manutenção preventiva e corretiva de equipamentos industriais críticos, garantindo a continuidade do seu processo produtivo.",
     benefits: [
@@ -23,6 +30,7 @@ export const servicesData = [
     id: "energia-solar",
     title: "Energia Solar & Inversores",
     icon: Sun,
+    backgroundImage: solarBg,
     shortDesc: "Manutenção especializada em usinas fotovoltaicas e inversores centrais.",
     description: "Serviços especializados de O&M (Operação e Manutenção) para usinas solares, focando na performance dos inversores e na integridade dos módulos.",
     benefits: [
@@ -41,6 +49,7 @@ export const servicesData = [
     id: "infraestrutura",
     title: "Infraestrutura Elétrica",
     icon: Zap,
+    backgroundImage: infraBg,
     shortDesc: "Subestações, quadros de comando e redes de distribuição.",
     description: "Projetamos, montamos e mantemos sua infraestrutura elétrica de média e baixa tensão, seguindo todas as normas de segurança vigentes.",
     benefits: [
@@ -59,6 +68,8 @@ export const servicesData = [
     id: "preditiva",
     title: "Manutenção Preditiva",
     icon: Activity,
+    backgroundImage: preditivaBg,
+    backgroundPosition: 'bottom',
     shortDesc: "Termografia, análise de vibração e ultrassom.",
     description: "Utilizamos tecnologia de ponta para identificar falhas incipientes antes que elas causem paradas, permitindo intervenções planejadas.",
     benefits: [
@@ -77,6 +88,7 @@ export const servicesData = [
     id: "projetos",
     title: "Projetos & Laudos Técnicos",
     icon: ClipboardCheck,
+    backgroundImage: projetosBg,
     shortDesc: "Adequação NR10, SPDA, PIE e estudos de proteção.",
     description: "Regularize sua empresa e garanta a segurança jurídica e operacional com nossa documentação técnica elaborada por engenheiros especialistas.",
     benefits: [
@@ -95,6 +107,7 @@ export const servicesData = [
     id: "emergencia", // Special handling usually, but included for detail page consistency
     title: "Atendimento de Emergência",
     icon: ShieldAlert,
+    backgroundImage: emergenciaBg,
     shortDesc: "Plantão técnico 24h para situações críticas.",
     description: "Equipe de pronto atendimento disponível 24 horas por dia, 7 dias por semana, para restabelecer sua operação no menor tempo possível.",
     benefits: [

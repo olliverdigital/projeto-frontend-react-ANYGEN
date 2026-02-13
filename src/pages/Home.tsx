@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button'
 import { ServiceCard } from '@/components/ServiceCard'
 import { ContactForm } from '@/components/ContactForm'
 import { Testimonials } from '@/components/Testimonials'
-import heroBg from '@/assets/hero-bg.jpg'
-import industrialMaintenance from '@/assets/industrial-maintenance.jpg'
+import heroBg from '@/assets/midaslsltda-especialistas-em-manutencao-de-inversores.webp'
+import trustImage from '@/assets/midaslsltda-eletronica-de-potencia (1).webp'
 
 export default function Home() {
   return (
@@ -314,13 +314,13 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 bg-secondary translate-x-4 translate-y-4 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-50"></div>
               <img
-                src={industrialMaintenance}
-                alt="Equipe técnica MIDAS"
+                src={trustImage}
+                alt="Laboratório de eletrônica de potência MIDAS - rigor técnico e instrumentação de precisão"
                 width="800"
                 height="600"
                 loading="lazy"
                 decoding="async"
-                className="w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl border border-slate-900"
+                className="w-full max-h-[450px] object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl border border-slate-900"
               />
               <div className="absolute -bottom-8 -left-8 bg-slate-900 p-8 text-white border-l-4 border-secondary shadow-xl max-w-xs">
                 <p className="text-5xl font-mono font-bold text-white mb-1">+500</p>

@@ -1,55 +1,45 @@
 # MIDAS Locações & Serviços Ltda - Website Institucional
 
-[![React](https://img.shields.io/badge/React-19.0-blue.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.1-646CFF.svg)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC.svg)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC.svg)](https://tailwindcss.com/)
 
-Site institucional moderno e otimizado para a MIDAS Locações & Serviços Ltda, especializada em manutenção industrial e serviços elétricos.
+Site institucional moderno e otimizado para a **MIDAS Locações & Serviços Ltda**, especializada em manutenção industrial, energia solar e infraestrutura elétrica. Focado em **SEO**, **performance** e **conversão B2B**.
 
-## 🚀 Como rodar o projeto
+---
+
+## 🚀 Como Rodar o Projeto
 
 ### Pré-requisitos
 
-- Node.js 18+ ou superior
+- Node.js 18+
 - pnpm (recomendado) ou npm
 
 ### Instalação
 
-1. **Clone o repositório**:
-   ```bash
-   git clone <url-do-repositorio>
-   cd projeto-frontend-react-ANYGEN
-   ```
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+cd projeto-midas-final
 
-2. **Instale as dependências**:
-   ```bash
-   pnpm install
-   # ou
-   npm install
-   ```
+# Instale as dependências
+pnpm install
 
-3. **Configure as variáveis de ambiente**:
-   ```bash
-   cp .env.example .env
-   ```
-   Edite o arquivo `.env` e configure as variáveis necessárias.
+# Configure as variáveis de ambiente
+cp .env.example .env
 
-4. **Inicie o servidor de desenvolvimento**:
-   ```bash
-   pnpm dev
-   # ou
-   npm run dev
-   ```
+# Inicie o servidor de desenvolvimento
+pnpm dev
+```
 
-5. **Acesse no navegador**:
-   O terminal mostrará o link local (geralmente `http://localhost:5173`).
+Acesse no navegador: `http://localhost:5173`
 
 ---
 
 ## 🔧 Variáveis de Ambiente
 
-Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 # Obrigatórias
@@ -61,78 +51,68 @@ VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
 VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-> **Nota**: Todas as variáveis de ambiente devem começar com `VITE_` para serem acessíveis no código.
+> **Nota**: Todas as variáveis devem começar com `VITE_` para serem acessíveis no código.
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Tecnologias
 
-### Core
-- **React 19** - Biblioteca UI
-- **TypeScript 5.3** - Tipagem estática
-- **Vite 5.1** - Build tool e dev server
-
-### Estilização
-- **Tailwind CSS 3.4** - Framework CSS utility-first
-- **Shadcn/ui** - Componentes UI acessíveis
-- **Lucide React** - Ícones
-
-### Roteamento & Forms
-- **React Router Dom v6** - Navegação SPA
-- **React Hook Form** - Gerenciamento de formulários
-- **Zod** - Validação de schemas
-
-### HTTP & Utilities
-- **Axios** - Cliente HTTP
-- **Framer Motion** - Animações
-- **clsx + tailwind-merge** - Utilitários CSS
+| Categoria | Tecnologia |
+|---|---|
+| **Core** | React 18.3, TypeScript 5.7, Vite 7.3 |
+| **Estilização** | Tailwind CSS 4, Shadcn/ui, Lucide React |
+| **Roteamento** | React Router Dom v6 |
+| **Formulários** | React Hook Form + Zod |
+| **HTTP** | Axios |
+| **SEO** | React Helmet Async, Schema Markup (JSON-LD) |
+| **Utilitários** | clsx, tailwind-merge |
 
 ---
 
 ## 📂 Estrutura do Projeto
 
 ```
-projeto-frontend-react-ANYGEN/
-├── public/              # Arquivos estáticos
-│   ├── robots.txt       # SEO - instruções para crawlers
-│   └── sitemap.xml      # SEO - mapa do site
+projeto-midas-final/
+├── public/                  # Arquivos estáticos (robots.txt, sitemap.xml)
 ├── src/
-│   ├── assets/          # Imagens e recursos
-│   ├── components/      # Componentes reutilizáveis
-│   │   ├── ui/          # Componentes base (Shadcn)
+│   ├── assets/              # Imagens (.webp, .jpg, .png)
+│   ├── components/          # Componentes reutilizáveis
+│   │   ├── ui/              # Componentes base (Shadcn)
 │   │   ├── Header.tsx
 │   │   ├── Footer.tsx
-│   │   └── ContactForm.tsx
-│   ├── pages/           # Páginas da aplicação
-│   │   ├── Home.tsx
-│   │   ├── Sobre.tsx
-│   │   ├── Servicos.tsx
-│   │   ├── ServiceDetail.tsx
-│   │   ├── Emergencia.tsx
-│   │   ├── Contato.tsx
-│   │   ├── Blog.tsx
-│   │   └── NotFound.tsx
-│   ├── data/            # Dados estruturados
-│   │   └── services.ts
-│   ├── lib/             # Configurações e utilitários
-│   │   ├── axios.ts     # Cliente HTTP configurado
-│   │   └── utils.ts     # Funções auxiliares
-│   ├── hooks/           # Custom React hooks
-│   ├── App.tsx          # Componente principal
-│   ├── main.tsx         # Entry point
-│   └── index.css        # Estilos globais
-├── .env.example         # Exemplo de variáveis de ambiente
-├── DEPLOYMENT.md        # Guia de deployment
-└── README.md            # Este arquivo
+│   │   ├── ContactForm.tsx
+│   │   ├── InverterBrands.tsx
+│   │   ├── Testimonials.tsx
+│   │   ├── SEO.tsx
+│   │   └── ImageOptimized.tsx
+│   ├── pages/               # Páginas da aplicação
+│   │   ├── Home.tsx          # Página principal com hero dinâmico
+│   │   ├── Sobre.tsx         # Sobre com Missão/Visão/Valores
+│   │   ├── Servicos.tsx      # Lista de serviços
+│   │   ├── ServiceDetail.tsx # Detalhe de serviço (hero com background dinâmico)
+│   │   ├── Emergencia.tsx    # Atendimento emergencial
+│   │   ├── Contato.tsx       # Formulário de contato
+│   │   ├── Blog.tsx          # Blog/conteúdo
+│   │   └── NotFound.tsx      # Página 404
+│   ├── data/
+│   │   └── services.ts      # Dados dos serviços (inclui imagens de background)
+│   ├── lib/                 # Configurações e utilitários
+│   ├── hooks/               # Custom React hooks
+│   ├── App.tsx              # Componente principal + rotas
+│   ├── main.tsx             # Entry point
+│   └── index.css            # Estilos globais e design tokens
+├── .env.example
+├── DEPLOYMENT.md
+└── README.md
 ```
 
 ---
 
 ## 🎨 Personalização
 
-### Cores
+### Cores da Marca
 
-As cores da marca estão configuradas em `tailwind.config.js` e `src/index.css`:
+Configuradas em `src/index.css`:
 
 - **Primary (Azul Industrial)**: `#003366`
 - **Secondary (Dourado)**: `#D97706`
@@ -143,24 +123,50 @@ As cores da marca estão configuradas em `tailwind.config.js` e `src/index.css`:
 - **Headings**: Barlow (Google Fonts)
 - **Body**: Inter (Google Fonts)
 
-### Dados dos Serviços
+### Imagens dos Serviços
 
-Edite o arquivo `src/data/services.ts` para modificar os serviços oferecidos.
+Cada serviço pode ter uma **imagem de background** no hero. Para alterar:
+
+1. Coloque a nova imagem em `src/assets/`
+2. Abra `src/data/services.ts`
+3. Altere o caminho no `import` correspondente ou adicione um novo
+4. Adicione a propriedade `backgroundImage` ao serviço desejado
+5. Opcionalmente, use `backgroundPosition` para ajustar o enquadramento (ex: `'bottom'`, `'top'`, `'center'`)
+
+```ts
+// Exemplo em services.ts
+import minhaBg from '@/assets/minha-imagem.webp'
+
+{
+  id: "meu-servico",
+  backgroundImage: minhaBg,
+  backgroundPosition: 'bottom', // opcional
+  // ...
+}
+```
+
+### Imagens das Páginas
+
+Para trocar imagens em qualquer página (Home, Sobre, etc.):
+
+1. Localize o `import` no topo do arquivo `.tsx`
+2. Mude o caminho do arquivo para a nova imagem
+3. Salve — a imagem atualiza automaticamente
+
+```tsx
+// Exemplo: trocar a imagem do hero na Home
+import heroBg from '@/assets/nova-imagem.webp'
+```
 
 ---
 
 ## 📦 Scripts Disponíveis
 
 ```bash
-# Desenvolvimento
-pnpm dev          # Inicia servidor de desenvolvimento
-
-# Build
-pnpm build        # Cria build de produção em /dist
-pnpm preview      # Preview do build de produção
-
-# Qualidade de Código
-pnpm lint         # Executa ESLint
+pnpm dev          # Servidor de desenvolvimento
+pnpm build        # Build de produção (/dist)
+pnpm preview      # Preview do build
+pnpm lint         # Verifica código com ESLint
 ```
 
 ---
@@ -183,16 +189,14 @@ O build será gerado na pasta `dist/`.
 
 Para instruções detalhadas, consulte [DEPLOYMENT.md](./DEPLOYMENT.md).
 
-### Configuração Importante
+### Configuração de Rotas SPA
 
-Para que as rotas funcionem corretamente em produção, adicione:
-
-**Netlify** - Criar `public/_redirects`:
+**Netlify** (`public/_redirects`):
 ```
 /*    /index.html   200
 ```
 
-**Vercel** - Criar `vercel.json`:
+**Vercel** (`vercel.json`):
 ```json
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
@@ -203,32 +207,16 @@ Para que as rotas funcionem corretamente em produção, adicione:
 
 ## ✨ Funcionalidades
 
-- ✅ **Responsivo** - Mobile-first design
-- ✅ **SEO Otimizado** - Meta tags, sitemap, robots.txt
-- ✅ **Acessível** - ARIA labels, navegação por teclado
-- ✅ **Performance** - Lazy loading de rotas, otimização de imagens
-- ✅ **Formulário Validado** - React Hook Form + Zod
-- ✅ **Integração WhatsApp** - Botão flutuante e links diretos
-- ✅ **Dark Mode Ready** - Suporte a tema escuro (configurável)
-
----
-
-## 🔍 Melhorias Implementadas
-
-### Versão Atual
-
-- ✅ Correção de caminhos de imagens para produção
-- ✅ Validação completa de formulários com Zod
-- ✅ Integração com Formspree para envio de emails
-- ✅ Lazy loading de todas as rotas
-- ✅ Configuração de variáveis de ambiente
-- ✅ Axios configurado com interceptors
-- ✅ ESLint atualizado para flat config
-- ✅ SEO: robots.txt e sitemap.xml
-- ✅ **SEO Avançado**: Schema Markup (JSON-LD) para LocalBusiness e Service
-- ✅ **GEO Ready**: Estrutura otimizada para IAs (ChatGPT/Gemini)
-- ✅ **Dynamic Meta**: Gerenciamento de tags via React Helmet Async
-- ✅ Documentação de deployment
+- ✅ **Responsivo** — Mobile-first design
+- ✅ **SEO Avançado** — Meta tags dinâmicas, Schema JSON-LD, sitemap, robots.txt
+- ✅ **GEO Ready** — Estrutura otimizada para IAs (ChatGPT, Gemini, Perplexity)
+- ✅ **Hero Dinâmico** — Imagens de background por serviço com overlay automático
+- ✅ **Acessível** — ARIA labels, navegação por teclado
+- ✅ **Performance** — Lazy loading de rotas, imagens WebP otimizadas
+- ✅ **Formulário Validado** — React Hook Form + Zod + Formspree
+- ✅ **Integração WhatsApp** — Botão flutuante e links diretos
+- ✅ **Missão/Visão/Valores** — Seção estilizada com tema Industrial Premium
+- ✅ **Marcas de Inversores** — Seção dedicada na página de Energia Solar
 
 ---
 
@@ -236,18 +224,20 @@ Para que as rotas funcionem corretamente em produção, adicione:
 
 ### Imagens não carregam
 
-Certifique-se de que as imagens estão sendo importadas corretamente:
-
 ```tsx
-import imagemExemplo from '@/assets/imagem.jpg'
-<img src={imagemExemplo} alt="Descrição" />
+// ✅ Correto — importar e usar a variável
+import img from '@/assets/imagem.webp'
+<img src={img} alt="Descrição" />
+
+// ❌ Errado — caminho direto no src
+<img src="/assets/imagem.webp" />
 ```
 
 ### Formulário não envia
 
-1. Verifique se `VITE_FORMSPREE_ENDPOINT` está configurado no `.env`
-2. Certifique-se de que o endpoint do Formspree está ativo
-3. Verifique o console do navegador para erros
+1. Verifique `VITE_FORMSPREE_ENDPOINT` no `.env`
+2. Confirme que o endpoint Formspree está ativo
+3. Verifique o console do navegador
 
 ### Build falha
 
@@ -262,16 +252,15 @@ pnpm build
 
 ## 📄 Licença
 
-Este projeto é propriedade da MIDAS Locações & Serviços Ltda.
+Este projeto é propriedade da **MIDAS Locações & Serviços Ltda**.
 
 ---
 
 ## 📞 Contato
 
-- **Website**: [Em breve]
 - **WhatsApp**: (34) 99809-9418
 - **Email**: contato@midas.com.br
-- **Localização**: Rio Paranaíba - MG
+- **Localização**: Rio Paranaíba — MG
 
 ---
 

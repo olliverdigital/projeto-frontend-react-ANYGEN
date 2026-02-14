@@ -61,7 +61,7 @@ export default function Blog() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <Card key={post.id} className="flex flex-col overflow-hidden hover:shadow-lg transition-all border-slate-200">
-              <div className="aspect-video w-full overflow-hidden">
+              <Link to={`/blog/${post.slug}`} className="aspect-video w-full overflow-hidden block">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -71,7 +71,7 @@ export default function Blog() {
                   decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-              </div>
+              </Link>
               <CardHeader className="space-y-4">
                 <div className="flex items-center justify-between text-sm text-muted-foreground">
                   <div className="flex items-center gap-2 text-brand-blue font-medium">
@@ -98,8 +98,10 @@ export default function Blog() {
                     <User className="h-4 w-4 text-slate-400" />
                     {post.author}
                   </div>
-                  <Button variant="ghost" size="sm" className="text-brand-blue hover:text-brand-dark p-0 hover:bg-transparent">
-                    Ler artigo <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild variant="ghost" size="sm" className="text-brand-blue hover:text-brand-dark p-0 hover:bg-transparent">
+                    <Link to={`/blog/${post.slug}`}>
+                      Ler artigo <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </CardFooter>

@@ -1,8 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
+import { Suspense } from 'react'
 import { SEO } from '@/components/SEO'
 import { Button } from '@/components/ui/button'
-import { Calendar, User, Tag, ArrowLeft, Share2 } from 'lucide-react'
+import { Calendar, User, Tag, ArrowLeft, Share2, Loader2 } from 'lucide-react'
 import { posts } from './Blog'
+import { getArticleComponent } from '@/content/articles'
 
 export default function BlogPost() {
     const { slug } = useParams()
@@ -19,6 +21,8 @@ export default function BlogPost() {
             </div>
         )
     }
+
+    const ArticleContent = slug ? getArticleComponent(slug) : null
 
     return (
         <div className="min-h-screen bg-background pb-20">
@@ -75,33 +79,27 @@ export default function BlogPost() {
             </div>
 
             <article className="container max-w-3xl mt-12 bg-white p-8 md:p-12 shadow-sm border border-slate-100 rounded-lg">
-                {/* Placeholder Content Area */}
                 <div className="prose prose-slate prose-lg max-w-none">
                     <p className="lead text-xl text-slate-600 font-medium mb-8">
                         {post.excerpt}
                     </p>
 
-                    <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r">
-                        <p className="text-blue-900 m-0 font-medium">
-                            💡 <strong>Nota do Editor:</strong> O conteúdo completo deste artigo será disponibilizado em breve.
-                            Estamos finalizando os detalhes técnicos para trazer a análise mais completa sobre {post.title.toLowerCase()}.
-                        </p>
-                    </div>
-
-                    <h3>O que você vai aprender neste artigo:</h3>
-                    <ul>
-                        <li>Principais desafios da {post.category}</li>
-                        <li>Melhores práticas do mercado industrial</li>
-                        <li>Como a MIDAS atua neste cenário</li>
-                        <li>Análise de ROI e eficiência operacional</li>
-                    </ul>
-
-                    <hr className="my-10 border-slate-200" />
-
-                    <p>
-                        Fique atento às nossas atualizações. Enquanto isso, se você tem uma emergência ou dúvida específica sobre
-                        {post.category}, entre em contato com nosso time de engenharia.
-                    </p>
+                    {ArticleContent ? (
+                        <Suspense fallback={
+                            <div className="flex items-center justify-center py-12">
+                                <Loader2 className="h-8 w-8 animate-spin text-brand-blue" />
+                            </div>
+                        }>
+                            <ArticleContent />
+                        </Suspense>
+                    ) : (
+                        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r">
+                            <p className="text-blue-900 m-0 font-medium">
+                                💡 <strong>Nota do Editor:</strong> O conteúdo completo deste artigo será disponibilizado em breve.
+                                Estamos finalizando os detalhes técnicos para trazer a análise mais completa sobre {post.title.toLowerCase()}.
+                            </p>
+                        </div>
+                    )}
                 </div>
 
                 {/* Share & CTA */}
